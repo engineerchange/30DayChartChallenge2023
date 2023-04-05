@@ -48,7 +48,7 @@ g1 <- ggplot() +
         panel.grid.minor=element_blank(),
         plot.background=element_blank(),
         plot.title = element_text(hjust = 0.5)) + # force title to center
-  annotate("text",x=-7698013, y=5665378, label="atop(bold('89.5% coverage'))", col="white",size=4,parse=TRUE);g1 # annotate word over plots
+  annotate("text",x=-7699013, y=5665378, label="atop(bold('89.5% coverage'))", col="white",size=4,parse=TRUE);g1 # annotate word over plots
 
 thisArea / totalArea # calculate actual percentage
 

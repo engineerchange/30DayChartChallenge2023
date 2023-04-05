@@ -21,6 +21,7 @@ ggplot2 visual using pictorial percentage chart (see [part-to-whole](https://dat
 
 Resources that helped:
 - Adapted mostly from [SO: Pictorial percentage chart in R](https://stackoverflow.com/questions/56238146/r-fill-map-with-color-by-percentage)
+- [Coordinate reference system (crs) explainer](https://source.opennews.org/articles/choosing-right-map-projection/)
 - [plot_annotation (patchwork)](https://patchwork.data-imaginist.com/reference/plot_annotation.html)
 - [SO: color in patchwork title](https://stackoverflow.com/questions/61642489/colour-in-title-of-patchwork-of-ggplots-using-ggtext)
 - [SO: bold/emphasis in annotate function](https://stackoverflow.com/questions/31568453/using-different-font-styles-in-annotate-ggplot2)

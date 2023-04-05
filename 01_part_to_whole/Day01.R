@@ -8,7 +8,7 @@ increment <- 10*80 # smaller numbers mean more accurate map
 
 # load shapefile
 gerShp <- st_read('~/Downloads/cb_2018_us_state_500k/cb_2018_us_state_500k.shp')
-gerShp <- st_transform(gerShp, 3035)
+gerShp <- st_transform(gerShp, 3857) # crs for states is 3857
 gerShp_ME <- gerShp %>% dplyr::filter(NAME=='Maine')
 gerShp_ND <- gerShp %>% dplyr::filter(NAME=='North Dakota')
 
@@ -48,7 +48,7 @@ g1 <- ggplot() +
         panel.grid.minor=element_blank(),
         plot.background=element_blank(),
         plot.title = element_text(hjust = 0.5)) + # force title to center
-  annotate("text",x=-564619, y=5565773, label="atop(bold('89.5% coverage'))", col="white",size=4,parse=TRUE) # annotate word over plots
+  annotate("text",x=-7698013, y=5665378, label="atop(bold('89.5% coverage'))", col="white",size=4,parse=TRUE);g1 # annotate word over plots
 
 thisArea / totalArea # calculate actual percentage
 
@@ -89,13 +89,13 @@ g2 <- ggplot() +
         panel.grid.minor=element_blank(),
         plot.background=element_blank(),
         plot.title = element_text(hjust = 0.5)) + # force title to center
-  annotate("text",x=-486091, y=7985587, label="atop(bold('1.72% coverage'))", col="darkgreen",size=4,parse=TRUE) # annotate word over plots
+  annotate("text",x=-11172646, y=5951780, label="atop(bold('1.72% coverage'))", col="darkgreen",size=4,parse=TRUE);g2 # annotate word over plots
 
 thisArea / totalArea # calculate actual percentage
 
 # combine plots -----------------------------------------------------------
 # use patchwork, ggtext
-(g1 + ggtitle("Maine")) + (g2 + ggtitle("North Dakota")) +
+(g1 + ggtitle("Maine")) + (g2 + ggtitle("North Dakota")) + plot_layout(widths = 1) +
   plot_annotation(title = "<span style='color:#006400;'>Forest coverage</span> extremes in the U.S.",
                   subtitle = "Visualizing the states with the largest and smallest amount of timberland",
                   caption = "Data source: U.S. Forest Service's Forest Inventory and Analysis (FY2016)",

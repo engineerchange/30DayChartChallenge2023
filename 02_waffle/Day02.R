@@ -126,12 +126,12 @@ ggmovieyr <- function(yr){
   return(g1)
 }
   
-do.call(patchwork::wrap_plots, lapply(c(1969:1975), function(x){
+do.call(patchwork::wrap_plots, lapply(c(1969:2023), function(x){
   ggmovieyr(x)
 })) -> gg_multi
 gg_multi + plot_annotation(title="Weekly number-one film in the U.S.'s gross revenue from 1969 to 2023",
                            subtitle='Each square represents the highest gross revenue of any movie that week.',
-                           theme = theme(plot.title = element_text(hjust = 0.5),
+                           theme = theme(plot.title = element_text(hjust = 0.5,size = 24),
                                          plot.subtitle = element_text(hjust = 0.5)),
                            caption = "Data source: Wikipedia's List of [year] box office number-one films in the United States\nNote: missing data and covid period as 'NA'.") +
   plot_layout(guides = 'collect',

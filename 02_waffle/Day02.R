@@ -133,7 +133,7 @@ gg_multi + plot_annotation(title="Weekly number-one film in the U.S.'s gross rev
                            subtitle='Each square represents the highest gross revenue of any movie that week.',
                            theme = theme(plot.title = element_text(hjust = 0.5,size = 24),
                                          plot.subtitle = element_text(hjust = 0.5)),
-                           caption = "Data source: Wikipedia's List of [year] box office number-one films in the United States\nNote: missing data and covid period as 'NA'.") +
+                           caption = "Data source: Wikipedia's List of [year] box office number-one films in the United States\nNote: missing data and covid period as gray.") +
   plot_layout(guides = 'collect',
               heights = 2,
               widths = 4,

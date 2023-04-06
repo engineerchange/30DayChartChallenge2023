@@ -1,5 +1,7 @@
 # 30DayChartChallenge2023
 
+![2023](2023.jpeg)
+
 Learn more about #30DayChartChallenge:
 - [z3tt's repo](https://github.com/z3tt/30DayChartChallenge2021)
 - [Official website](https://30daychartchallenge.org/about/)
@@ -25,3 +27,22 @@ Resources that helped:
 - [plot_annotation (patchwork)](https://patchwork.data-imaginist.com/reference/plot_annotation.html)
 - [SO: color in patchwork title](https://stackoverflow.com/questions/61642489/colour-in-title-of-patchwork-of-ggplots-using-ggtext)
 - [SO: bold/emphasis in annotate function](https://stackoverflow.com/questions/31568453/using-different-font-styles-in-annotate-ggplot2)
+
+## Day 2 - Waffle
+![Day02](/02_waffle/Day02.png)
+
+ggplot2 waffle
+
+- Code: [Day02.R](/02_waffle/Day02.R)
+- Packages used: tidyverse (ggplot2, plyr), rvest, janitor, patchwork, [liamgilbey/ggwaffle](https://github.com/liamgilbey/ggwaffle)
+- Data sources: Wikipedia lists of single-movie box office gross revenues; ex. [year of 1969](https://en.wikipedia.org/wiki/List_of_1969_box_office_number-one_films_in_the_United_States)
+- Notes: 
+	- Legend output has a bug I couldn't work around.
+	- Some months have 6 weeks (vs. usual 4-5 weeks) in length. This impacts the "ease" of looking at the visual. 
+	- Color choice could use some work.
+
+Resources that helped:
+- [ggwaffle's docs](https://liamgilbey.github.io/ggwaffle/)
+- [SO: patchwork::wrap_plots explainer](https://stackoverflow.com/questions/66840743/putting-together-a-patchwork-of-plots-by-creating-single-plots-by-iterating-over)
+- [viridis palette generator](https://waldyrious.net/viridis-palette-generator/)
+- [patchwork's plot_layout doc](https://patchwork.data-imaginist.com/reference/plot_layout.html)
